@@ -32,6 +32,11 @@ dependencies {
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.2'
 
     // ===============================
+    // Actuator (모니터링)
+    // ===============================
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    // ===============================
     // Database
     // ===============================
     runtimeOnly 'org.postgresql:postgresql' // PostgreSQL
@@ -71,4 +76,8 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+springBoot {
+    buildInfo()
 }
